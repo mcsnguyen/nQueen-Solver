@@ -70,13 +70,13 @@ public class Search {
                     currentNode = new QueenNode(nextNode.getQueenPositions());
                 }
             }
-            temperatureMapping(iterations);
+            temperatureMapping();
             iterations++;
         }
         return formatResult(currentNode, iterations);
     }
 
-    public void temperatureMapping(int iterations){
+    public void temperatureMapping(){
         this.temperature *= 0.9985;
     }
 
